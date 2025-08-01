@@ -46,3 +46,21 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.background-image {
+	height: 100%;
+	position: absolute;
+	z-index: 0;
+}
+
+body {
+	height: 100%;
+	background: linear-gradient(to bottom right, #6dfc91, #f8ec59);
+
+}
+
+#root {
+	height: 100vh;
+	padding: 100px;
+	box-sizing: border-box;
+}

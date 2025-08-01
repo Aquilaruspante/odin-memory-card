@@ -1,0 +1,15 @@
+.card {
+    border: 7px solid rgb(215, 253, 71);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.name {
+    padding: 10px;
+    text-align: center;
+    margin-top: 0px;
+}
+
+.picture {
+    margin-bottom: 0px;
+}

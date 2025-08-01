@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import './card.css';
 
 export default function Card({ URL }) {
     const [clicked, setClicked] = useState(false);
@@ -17,7 +18,7 @@ export default function Card({ URL }) {
     return (
         data ? 
         <div className='card'>
-            <img src={data.image} alt="picture" />
+            <img className='picture' src={data.image} alt="picture" />
             <h3 className="name">{data.name}</h3>
         </div>
         : 
