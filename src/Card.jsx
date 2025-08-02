@@ -27,7 +27,7 @@ export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver 
 
     useEffect(() => {
         if(gameOver) setClicked(false);
-    }, gameOver);
+    }, [gameOver]);
 
     return (
         data ? 
