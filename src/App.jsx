@@ -5,7 +5,7 @@ import Score from './Score';
 import { useState, useEffect } from 'react';
 
 const baseURL = 'https://rickandmortyapi.com/api/character';
-const ids = [1, 2, 3, 4, 5, 7, 13, 17, 20, 26, 28, 29, 47, 58];
+const ids = [1, 2, 3, 4, 5, 7, 17, 20, 26, 28, 29, 47];
 
 function App() {
   const [gameOver, setGameOver] = useState(false);
@@ -29,9 +29,9 @@ function App() {
     <>
       <div className='game-container'>
         <div className="header">
-        <h1>Rick And Morty Memory Game</h1>
-        <Score score={score} record={record} />
-      </div>
+          <h1>Rick And Morty Memory Game</h1>
+          <Score score={score} record={record} />
+        </div>
         <div className='card-container'>
           {ids.map((id) => (
             <Card key={id} URL={`${baseURL}/${id}`} handleGameOver={handleGameOver} setScore={setScore} />

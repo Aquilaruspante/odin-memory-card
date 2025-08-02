@@ -2,14 +2,19 @@
     border: 7px solid rgb(215, 253, 71);
     border-radius: 5px;
     box-sizing: border-box;
+    width: 214px;
+    font-weight: 100;
+}
+
+.card img {
+    width: 200px;
+    border-radius: 5px;
 }
 
 .name {
     padding: 10px;
     text-align: center;
     margin-top: 0px;
+    background-color: rgb(215, 253, 71);
 }
 
-.picture {
-    margin-bottom: 0px;
-}

@@ -55,12 +55,16 @@ table {
 
 body {
 	height: 100%;
-	background: linear-gradient(to bottom right, #6dfc91, #f8ec59);
-
+	background-color: #6dfc91;
+	color: #053511;
 }
 
 #root {
 	height: 100vh;
-	padding: 100px;
-	box-sizing: border-box;
+}
+
+.chewy-regular {
+  font-family: "Chewy", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
