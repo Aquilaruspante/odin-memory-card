@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import './card.css';
 
-export default function Card({ URL, handleGameOver, setScore }) {
+export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver }) {
     const [clicked, setClicked] = useState(false);
     const [data, setData] = useState(undefined);
 
     function handleClick() {
-        console.log('clicked', clicked);
         if (clicked) {
             handleGameOver();
         } else {
             setClicked(true);
             setScore(prev => prev + 1);
+            shuffle();
         }
     }
 
@@ -20,9 +20,14 @@ export default function Card({ URL, handleGameOver, setScore }) {
             const response = await fetch(URL);
             const json = await response.json();
             setData(json);
+            console.log('fetching data...');
         }
         getData();
     }, [URL]);
+
+    useEffect(() => {
+        if(gameOver) setClicked(false);
+    }, gameOver);
 
     return (
         data ? 
