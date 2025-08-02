@@ -6,6 +6,15 @@
     font-weight: 100;
 }
 
+.card:hover {
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #3ba054;
+} 
+
+.card:active {
+    box-shadow: inset 5px 5px rgb(105, 128, 24);
+}
+
 .card img {
     width: 200px;
     border-radius: 5px;
