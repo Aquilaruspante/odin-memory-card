@@ -5,15 +5,19 @@ export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver 
     const [clicked, setClicked] = useState(false);
     const [data, setData] = useState(undefined);
 
-    function handleClick() {
-        if (clicked) {
-            handleGameOver();
-        } else {
-            setClicked(true);
-            setScore(prev => prev + 1);
-            shuffle();
-        }
-    }
+    function handleClick(e) {
+        console.log('here');
+        if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
+            e.target.blur();
+            if (clicked) {
+                handleGameOver();
+            } else {
+                setClicked(true);
+                setScore(prev => prev + 1);
+                shuffle();
+            };
+        };
+    };
 
     useEffect(() => {
         async function getData() {
@@ -31,7 +35,7 @@ export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver 
 
     return (
         data ? 
-        <div className='card' onClick={handleClick} tabIndex={0}>
+        <div className='card' onClick={handleClick} onKeyDown={handleClick} tabIndex={0}>
             <img className='picture' src={data.image} alt="picture" />
             <h3 className="name">{data.name}</h3>
         </div>
