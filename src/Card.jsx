@@ -31,7 +31,7 @@ export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver 
 
     return (
         data ? 
-        <div className='card' onClick={handleClick}>
+        <div className='card' onClick={handleClick} tabIndex={0}>
             <img className='picture' src={data.image} alt="picture" />
             <h3 className="name">{data.name}</h3>
         </div>
