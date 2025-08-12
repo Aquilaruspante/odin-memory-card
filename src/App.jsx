@@ -46,15 +46,15 @@ function App() {
   return (
     <>
       <div className='game-container'>
-        <div className="header">
+        <header className="header">
           <h1>Rick And Morty Memory Game</h1>
           <Score score={score} record={record} />
-        </div>
-        <div className='card-container'>
+        </header>
+        <main className='card-container'>
           {ids.map((id) => (
             <Card key={id} URL={`${baseURL}/${id}`} handleGameOver={handleGameOver} setScore={setScore} shuffle={shuffle} gameOver={gameOver} />
           ))}
-        </div>
+        </main>
       </div>
     </>
   )
