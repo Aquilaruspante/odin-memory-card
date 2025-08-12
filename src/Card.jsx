@@ -36,8 +36,8 @@ export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver 
     return (
         data ? 
         <div className='card' onClick={handleClick} onKeyDown={handleClick} tabIndex={0}>
-            <img className='picture' src={data.image} alt="picture" />
-            <h3 className="name">{data.name}</h3>
+            <img className='picture' src={data.image} alt="picture" aria-hidden="true" />
+            <h3 className="name" aria-label={`card ${data.name}`}>{data.name}</h3>
         </div>
         : 
         <div className='loading-message'>Loading...</div>
