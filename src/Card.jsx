@@ -8,12 +8,12 @@ export default function Card({ URL, handleGameOver, setScore, shuffle, gameOver 
     function handleClick(e) {
         console.log('here');
         if (e.type === 'click' || e.key === 'Enter' || e.key === ' ') {
-            e.target.blur();
+            e.currentTarget.blur();
             if (clicked) {
                 handleGameOver();
             } else {
                 setClicked(true);
-                setScore(prev => prev + 1);
+                setScore(prev => prev < 11 ? prev + 1 : handleGameOver());
                 shuffle();
             };
         };
